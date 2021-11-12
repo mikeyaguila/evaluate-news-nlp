@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>NLP Tool</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        
+        <header>
+            <span class="image-clickable">
+              <a href="/">
+                <h1>NLP Online Tool &#128295;</h1>
+              </a>
+              <a class="meaningcloud" href="https://www.meaningcloud.com/"><small>Powered by <img src="/src/client/images/meaningcloud_logo.png" alt="Meaning Cloud API Logo"></small></a>
+            </span>
+            <a href="/"><button>Contact Me</button></a>
+          </header>
+
+        <main>
+            <section>
+                <div class="card">
+                    <div class="card-image">	
+                        <h2 class="card-heading">
+                            Evaluate a new article with Natural Language Processing
+                        </h2>
+                    </div>
+                    <form class="card-form" autocomplete="off" onsubmit="return Client.handleSubmit(event)">
+                        <div class="input">
+                            <input id="url" class="input-field" type="text" name="input" value="">
+                            <label class="input-label">Enter URL:</label>
+                        </div>
+                        <div class="action">
+                            <input type="submit" name="" class="action-button" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">
+                        </div>
+                    </form>
+                    <div id="loading"></div>
+                    <p class="loading-text">Analyzing...</p>
+                    <div id="results-div">
+                        <h2>Results are in! &#127881;</h2>
+                        <div id="table-results" class="table">   
+                            <div class="row header green">
+                              <div class="cell">
+                                Property
+                              </div>
+                              <div class="cell">
+                                Result
+                              </div>
+                              <div class="cell">
+                                Status
+                              </div>
+                            </div>
+                            
+                            <div class="row">
+                              <div class="cell">
+                                Agreement
+                              </div>
+                              <div id="agreement" class="cell"></div>
+                              <div id="agreement-status" class="cell"></div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="cell">
+                                  Subjectivity
+                                </div>
+                                <div id="subjectivity" class="cell"></div>
+                                <div id="subjectivity-status" class="cell"></div>
+                              </div>
+                            
+                              <div class="row">
+                                <div class="cell">
+                                  Confidence
+                                </div>
+                                <div id="confidence" class="cell"></div>
+                                <div id="confidence-status" class="cell"></div>
+                              </div>
+                            
+                              <div class="row">
+                                <div class="cell">
+                                  Score
+                                </div>
+                                <div id="score" class="cell"></div>
+                                <div id="score-status" class="cell"></div>
+                              </div>
+                              <div class="row">
+                                <div class="cell">
+                                  Irony
+                                </div>
+                                <div id="irony" class="cell"></div>
+                                <div id="irony-status" class="cell"></div>
+                              </div>
+                            
+                          </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <div class="footer-content">
+                <p>A web tool that allows users to run Natural Language Processing (NLP) on articles or blogs found on other websites. NLP is the ability of an application to understand the human language, written or oral.</p>
+                <ul class="socials">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>copyright &copy;2021 | designed by <span>Mikey Aguila </span>&#128102;</p>
+            </div>
+        </footer>
+        <script>
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+            }
+        </script>
+    </body>
+</html>

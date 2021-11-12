@@ -24,17 +24,17 @@ In the terminal run:
 - Run `npm install` to install all dependencies listed in `package.json`. Among them are e.g., webpack, babel, node-sass, and jest (and some more). Checkout the file if you are interested.
 
 ## Get API Credentials for Meaningcloud
-- Go to [meaningcloud.com](https://www.meaningcloud.com/developer/sentiment-analysis) and create an account. At the time of writing, the API is free to use up to 1000 requests per day or 333 intensive requests. It is free to check how many requests you have remaining for the day.
-- Create a file called `.env` in the root `evaluate-news-nlp` folder and paste this line inside the file `API_KEY=xxxxx<PasteYourKeyHere>xxxxxx` and put your API key here.
+- Go to [meaningcloud.com](https://www.meaningcloud.com/developer/sentiment-analysis) and create an account. It is free to check how many requests you have remaining for the day.
+- Create a file called `.env` in the root `evaluate-news-nlp` folder and paste this line inside the file `API_KEY=xxxxx<API_KEY>xxxxxx` and put your API key here.
 
 ## Running the App (Production Mode)
 - Run `npm run build-prod`. This should finish without an error.
 - Run `npm run start`
 - Go to [http://localhost:8081/](http://localhost:8081/) in your browser (e.g. Firefox, Google Chrome). By default, this app runs on port 8081, but you can edit that in `src/server/index.js`.
+- Wait a second and see the results displayed in the website.
 
 ## Running the App (Developer Mode)
-- Open another terminal tab ad run `npm run build-dev`. Now, Chrome should open a tab, go to http://localhost:8080/ and respond as before.
-- In the [http://localhost:8081/](http://localhost:8081/) tab, provide an input text (only alphanumeric values, or else you will get a warning) such as "JavaScript is fun", wait a second and see the results displayed in the website.
+- Open another terminal tab ad run `npm run build-dev`. Now, Chrome should open a tab then automatically navigate to http://localhost:8080/.
 
 ## Testing the App With Jest
 If you want to check out the basic Jest unit tests in the repository then

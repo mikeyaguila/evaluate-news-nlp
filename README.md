@@ -15,7 +15,7 @@ Initial Page
 <!-- ![Screenshot of project](src/client/images/sc2021-11-12_151140.png) -->
 Results             
 :-------------------------:
-![Screenshot](src/client/images/sc2021-11-12_162624.png)
+![Screenshot](src/client/images/sc2021-11-12_164053_results.png)
 
 ## Installation Instructions
 In the terminal run:
